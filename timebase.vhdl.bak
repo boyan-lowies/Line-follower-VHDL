@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity timebase is
+    port(
+        clk         :in std_logic;
+        reset       :in std_logic;
+        count_out   :out std_logic_vector(0 to 19);
+    );
+
+end entity timebase
+
+architecture behavioural of timebase is
+    begin
+        clk     <=  '1' after 0 ms,
+                    '0' after 1 ms  when clk /= '0' 
+                    else '1' after 10 ms;
+            
+end architecture behavioural;

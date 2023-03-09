@@ -7,4 +7,6 @@ entity timebase is
         reset       :in std_logic;
         count_out   :out std_logic_ve;
     )
+
+    bullshit
     

@@ -3,6 +3,8 @@ use ieee.std_logic_1164.all;
 
 entity timebase is
     port(
-        input
+        clk         :in std_logic;
+        reset       :in std_logic;
+        count_out   :out std_logic_ve;
     )
     
